@@ -4,7 +4,7 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin"
 import HtmlWebpackPlugin from "html-webpack-plugin"
 import CopyPlugin from "copy-webpack-plugin"
 
-let htmlPageNames = ['contact-us', 'about'];
+let htmlPageNames = ['contact-us', 'about', 'services', 'pricing'];
 let multipleHtmlPlugins = htmlPageNames.map(name => {
   return new HtmlWebpackPlugin({
     template: `./${name}.html`, // relative path to the HTML files
