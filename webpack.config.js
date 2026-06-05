@@ -100,7 +100,11 @@ export default {
           globOptions: {
             ignore: ["**/.DS_Store"],
           },
-        }
+        },
+        {
+          from: "CNAME",
+          to: "[name][ext]",
+        },
       ]
     }),
 
