@@ -280,6 +280,23 @@ hr {
   text-align: center;
 }
 
+.page-intro-section > .section-header {
+  margin-bottom: 2rem;
+  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+}
+
+.page-intro-section > .section-header .section-kicker {
+  color: #f0c779;
+}
+
+.page-intro-section > .section-header h2 {
+  color: #f4d48a;
+}
+
+.page-intro-section > .section-header .lead-copy {
+  color: #fff1d2;
+}
+
 .section-kicker {
   color: #9a5528;
   font-size: 0.82rem;
