@@ -13,7 +13,7 @@
 // 1. Bootstrap Fonts
 //---------------------------------------------
 
-$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base: Georgia, "Times New Roman", serif;
 
 //---------------------------------------------
 // 2. Bootstrap Globals
@@ -27,16 +27,16 @@ $enable-gradients: false;
 // 3. Bootstrap Colors
 //---------------------------------------------
 
-$body-color: #000000; // The default text color
+$body-color: #2d2019; // The default text color
 
-$primary:    #0d6efd;
-$secondary:  #6c757d;
+$primary:    #b66a2d;
+$secondary:  #856340;
 $success:    #198754;
-$info:       #0dcaf0;
-$warning:    #ffc107;
-$danger:     #dc3545;
-$light:      #f8f9fa;
-$dark:       #212529;
+$info:       #654d7a;
+$warning:    #d9a84e;
+$danger:     #b23b3b;
+$light:      #f7efe2;
+$dark:       #19120f;
 
 //---------------------------------------------
 // 4. Bootstrap Container Width
