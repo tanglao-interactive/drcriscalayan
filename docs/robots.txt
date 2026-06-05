@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://unbroken.pang-app.com/sitemap.xml
+Sitemap: https://drcriscalayan.com/sitemap.xml
