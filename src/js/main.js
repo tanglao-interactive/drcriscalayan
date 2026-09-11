@@ -11,6 +11,14 @@ initBootstrap({
   toasts: true,
 });
 
+const formStatus = document.querySelector("#form-status");
+
+if (formStatus && new URLSearchParams(window.location.search).get("sent") === "1") {
+  formStatus.textContent = "Thank you. Your message has been sent.";
+  formStatus.classList.remove("d-none");
+  formStatus.focus();
+}
+
 const trackClick = (eventName, parameters) => {
   if (typeof window.gtag !== "function") {
     return;

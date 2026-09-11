@@ -46,9 +46,10 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <!-- NAVBAR -->
 
-<nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Primary navigation">
     <div class="container">
         <a class="navbar-brand" href="/">Dr. Cris Calayan Abad Santos</a>
         <button
@@ -83,10 +84,10 @@
                     <a class="nav-link" href="/services/">Themes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
+                    <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://www.facebook.com/drcris.org/">Facebook</a>
+                    <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)" href="https://www.facebook.com/drcris.org/">Facebook</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact-us/">Contact</a>
@@ -97,7 +98,7 @@
     <!-- /container -->
 </nav>
 
-<main class="container page-shell">
+<main id="main-content" class="container page-shell" tabindex="-1">
     <!-- JUMBOTRON -->
     <section id="jumbotron" class="hero">
         <div class="hero-panel">
@@ -113,6 +114,8 @@
                     <a
                         class="btn btn-primary btn-lg"
                         target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Find the book on Amazon (opens in a new tab)"
                         href="https://a.co/d/0hcpKVx6"
                         role="button"
                     >
@@ -163,8 +166,8 @@
                 <p>After graduating from medical school in the Philippines, she pursued her dream of practicing medicine in the United States while raising her children and navigating the challenges of building a new life in a foreign country.</p>
                 <p>Her memoir is written for foreign medical graduates, immigrant parents, and anyone who has had to rebuild from the beginning without letting adversity define them.</p>
                 <div class="social-links">
-                    <a href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650" target="_blank">LinkedIn</a>
-                    <a href="https://www.facebook.com/drcris.org/" target="_blank">Facebook</a>
+                    <a href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)">LinkedIn</a>
+                    <a href="https://www.facebook.com/drcris.org/" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)">Facebook</a>
                     <a href="mailto:info@drcriscalayan.com">Email</a>
                 </div>
             </div>

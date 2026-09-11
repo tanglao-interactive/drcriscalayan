@@ -42,8 +42,9 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- NAVBAR -->
-    <nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Primary navigation">
         <div class="container">
             <a class="navbar-brand" href="/">Dr. Cris Calayan Abad Santos</a>
             <button
@@ -63,7 +64,6 @@
                     <li class="nav-item">
                         <a
                             class="nav-link"
-                            aria-current="page"
                             href="/">
                             Book
                         </a>
@@ -72,16 +72,16 @@
                         <a class="nav-link" href="/about/">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/unbroken/">Unbroken</a>
+                        <a class="nav-link active" aria-current="page" href="/unbroken/">Unbroken</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/services/">Themes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
+                        <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://www.facebook.com/drcris.org/">Facebook</a>
+                        <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)" href="https://www.facebook.com/drcris.org/">Facebook</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact-us/">Contact</a>
@@ -92,11 +92,11 @@
         <!-- /container -->
     </nav>
 
-    <main class="container page-shell">
+    <main id="main-content" class="container page-shell" tabindex="-1">
             <section id="unbroken" class="content-section page-intro-section">
                 <div class="section-header">
                     <p class="section-kicker">Memoir</p>
-                    <h2>Unbroken</h2>
+                    <h1>Unbroken</h1>
                     <p class="lead-copy">My Journey as a Foreign Medical Graduate in the U.S.</p>
                 </div>
                 <div class="content-panel author-panel">
@@ -105,7 +105,7 @@
                         <p><i>Unbroken</i> follows Dr. Cris Calayan Abad Santos through the emotional and professional terrain of becoming a doctor across countries, starting over in the United States, and raising a family through uncertainty.</p>
                         <p>It is a story about reinvention, survival, faith, and the unbreakable human spirit.</p>
                         <div class="actions">
-                            <a class="btn btn-primary" href="https://a.co/d/0hcpKVx6" target="_blank">Find the Book</a>
+                            <a class="btn btn-primary" href="https://a.co/d/0hcpKVx6" target="_blank" rel="noopener noreferrer" aria-label="Find the book on Amazon (opens in a new tab)">Find the Book</a>
                             <a class="btn btn-outline-primary" href="/services/">Explore the Themes</a>
                         </div>
                     </div>
@@ -116,8 +116,8 @@
                         <h3 class="card-title">Connect with Dr. Cris</h3>
                         <p>
                             Email: <a href="mailto:info@drcriscalayan.com">info@drcriscalayan.com</a><br/>
-                            LinkedIn: <a href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650" target="_blank">Cris Calayan Abad-Santos, MD</a><br/>
-                            Facebook: <a href="https://www.facebook.com/drcris.org/" target="_blank">drcris.org</a>
+                            LinkedIn: <a href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650" target="_blank" rel="noopener noreferrer" aria-label="Cris Calayan Abad-Santos, MD on LinkedIn (opens in a new tab)">Cris Calayan Abad-Santos, MD</a><br/>
+                            Facebook: <a href="https://www.facebook.com/drcris.org/" target="_blank" rel="noopener noreferrer" aria-label="Dr. Cris on Facebook (opens in a new tab)">drcris.org</a>
                         </p>
                 </div>
         </section>

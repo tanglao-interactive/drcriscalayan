@@ -27,8 +27,9 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- NAVBAR -->
-    <nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Primary navigation">
         <div class="container">
             <a class="navbar-brand" href="/">Dr. Cris Calayan Abad Santos</a>
             <button
@@ -48,7 +49,6 @@
                     <li class="nav-item">
                         <a
                             class="nav-link"
-                            aria-current="page"
                             href="/">
                             Book
                         </a>
@@ -60,13 +60,13 @@
                         <a class="nav-link" href="/unbroken/">Unbroken</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/services/">Themes</a>
+                        <a class="nav-link active" aria-current="page" href="/services/">Themes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
+                        <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://www.facebook.com/drcris.org/">Facebook</a>
+                        <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)" href="https://www.facebook.com/drcris.org/">Facebook</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact-us/">Contact</a>
@@ -77,11 +77,11 @@
         <!-- /container -->
     </nav>
 
-    <main class="container page-shell">
+    <main id="main-content" class="container page-shell" tabindex="-1">
             <section id="contact" class="content-section page-intro-section">
                 <div class="section-header">
                     <p class="section-kicker">Unbroken</p>
-                    <h2>Book Themes</h2>
+                    <h1>Book Themes</h1>
                 </div>
                 <div class="content-panel">
                     <ul class="list-grid">
@@ -112,7 +112,7 @@
         <section class="content-section">
                 <div class="contact-card">
                         <p>
-                            <a class="btn btn-primary" href="https://a.co/d/0hcpKVx6" target="_blank">Find the Book</a>
+                            <a class="btn btn-primary" href="https://a.co/d/0hcpKVx6" target="_blank" rel="noopener noreferrer" aria-label="Find the book on Amazon (opens in a new tab)">Find the Book</a>
                             <a class="btn btn-outline-primary" href="/contact-us/">Contact the Author</a>
                         </p>
                 </div>

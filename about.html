@@ -46,9 +46,10 @@
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 <!-- NAVBAR -->
 
-<nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Primary navigation">
     <div class="container">
         <a class="navbar-brand" href="/">Dr. Cris Calayan Abad Santos</a>
         <button
@@ -68,13 +69,12 @@
                 <li class="nav-item">
                     <a
                         class="nav-link"
-                        aria-current="page"
-                        href="/">
+                            href="/">
                         Book
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="/about/">About</a>
+                    <a class="nav-link active" aria-current="page" href="/about/">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/unbroken/">Unbroken</a>
@@ -83,10 +83,10 @@
                     <a class="nav-link" href="/services/">Themes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
+                    <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="https://www.facebook.com/drcris.org/">Facebook</a>
+                    <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)" href="https://www.facebook.com/drcris.org/">Facebook</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/contact-us/">Contact</a>
@@ -97,12 +97,12 @@
     <!-- /container -->
 </nav>
 
-<main class="container page-shell">
+<main id="main-content" class="container page-shell" tabindex="-1">
     <section id="about" class="content-section">
         <div class="content-panel">
             <div class="section-header">
                 <p class="section-kicker">Author</p>
-                <h2>About Dr. Cris</h2>
+                <h1>About Dr. Cris</h1>
             </div>
             <div>
                 <p>Dr. Cris Calayan Abad Santos is a physician, author, entrepreneur, immigrant, and mother whose life journey spans continents, careers, and personal reinvention.</p>
@@ -268,8 +268,8 @@
                     <div class="contact-card">
                             <p>
                                 Email: <a href="mailto:info@drcriscalayan.com">info@drcriscalayan.com</a><br/>
-                                LinkedIn: <a href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650" target="_blank">Cris Calayan Abad-Santos, MD</a><br/>
-                                Facebook: <a href="https://www.facebook.com/drcris.org/" target="_blank">drcris.org</a>
+                                LinkedIn: <a href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650" target="_blank" rel="noopener noreferrer" aria-label="Cris Calayan Abad-Santos, MD on LinkedIn (opens in a new tab)">Cris Calayan Abad-Santos, MD</a><br/>
+                                Facebook: <a href="https://www.facebook.com/drcris.org/" target="_blank" rel="noopener noreferrer" aria-label="Dr. Cris on Facebook (opens in a new tab)">drcris.org</a>
                             </p>
                     </div>
         </section>

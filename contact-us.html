@@ -27,8 +27,9 @@
 </head>
 
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <!-- NAVBAR -->
-    <nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="nav-main navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Primary navigation">
         <div class="container">
             <a class="navbar-brand" href="/">Dr. Cris Calayan Abad Santos</a>
             <button
@@ -48,7 +49,6 @@
                     <li class="nav-item">
                         <a
                             class="nav-link"
-                            aria-current="page"
                             href="/">
                             Book
                         </a>
@@ -63,13 +63,13 @@
                         <a class="nav-link" href="/services/">Themes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
+                        <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)" href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650">LinkedIn</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="https://www.facebook.com/drcris.org/">Facebook</a>
+                        <a class="nav-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook (opens in a new tab)" href="https://www.facebook.com/drcris.org/">Facebook</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="/contact-us/">Contact</a>
+                        <a class="nav-link active" aria-current="page" href="/contact-us/">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -77,18 +77,18 @@
         <!-- /container -->
     </nav>
 
-    <main class="container page-shell">
+    <main id="main-content" class="container page-shell" tabindex="-1">
             <!-- Contact -->
             <section id="contact" class="content-section page-intro-section">
                 <div class="section-header">
                     <p class="section-kicker">Connect</p>
-                    <h2>Contact Dr. Cris</h2>
+                    <h1>Contact Dr. Cris</h1>
                 </div>
                         <div class="contact-card">
                                 <p>
                                     Email: <a href="mailto:info@drcriscalayan.com">info@drcriscalayan.com</a><br/>
-                                    LinkedIn: <a href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650" target="_blank">Cris Calayan Abad-Santos, MD</a><br/>
-                                    Facebook: <a href="https://www.facebook.com/drcris.org/" target="_blank">drcris.org</a>
+                                    LinkedIn: <a href="https://www.linkedin.com/in/cris-calayan-abad-santos-md-23249650" target="_blank" rel="noopener noreferrer" aria-label="Cris Calayan Abad-Santos, MD on LinkedIn (opens in a new tab)">Cris Calayan Abad-Santos, MD</a><br/>
+                                    Facebook: <a href="https://www.facebook.com/drcris.org/" target="_blank" rel="noopener noreferrer" aria-label="Dr. Cris on Facebook (opens in a new tab)">drcris.org</a>
                                 </p>
                         </div>
             </section>
@@ -97,6 +97,8 @@
             <section id="contact-form" class="content-section">
                 <div class="content-panel">
                 <h3>Contact Form</h3>
+                <div id="form-status" class="alert alert-success d-none" role="status" tabindex="-1"></div>
+                <p class="required-note" id="required-note">Fields marked required must be completed.</p>
                 <form
                     name="contactform"
                     action="https://formsubmit.co/info@drcriscalayan.com"
@@ -106,15 +108,16 @@
                         <input type="hidden" name="_template" value="table" />
                         <input type="hidden" name="_captcha" value="false" />
                         <input type="hidden" name="_next" value="https://drcriscalayan.com/contact-us/?sent=1" />
-                        <input type="text" name="_honey" class="d-none" tabindex="-1" autocomplete="off" />
+                        <div hidden aria-hidden="true"><label for="website">Leave this field blank</label><input id="website" type="text" name="_honey" tabindex="-1" autocomplete="off" /></div>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="firstName">First Name</label>
+                                <label for="firstName">First Name (required)</label>
                                 <input
                                     type="text"
                                     class="form-control"
                                     id="firstName"
                                     name="firstName"
+                                    autocomplete="given-name"
                                     placeholder="First Name"
                                     required
                                 />
@@ -126,6 +129,7 @@
                                     class="form-control"
                                     id="lastName"
                                     name="lastName"
+                                    autocomplete="family-name"
                                     placeholder="Last Name"
                                 />
                             </div>
@@ -137,17 +141,19 @@
                                 class="form-control"
                                 id="company"
                                 name="company"
+                                autocomplete="organization"
                                 placeholder="Company"
                             />
                         </div>
                         <div class="row">
                             <div class="col-12 col-md-6 mb-3">
-                                <label for="email">Email Address</label>
+                                <label for="email">Email Address (required)</label>
                                 <input
                                     type="email"
                                     class="form-control"
                                     id="email"
                                     name="email"
+                                    autocomplete="email"
                                     required
                                     placeholder="Your email"/>
                             </div>
@@ -158,6 +164,7 @@
                                     class="form-control"
                                     id="phone"
                                     name="phone"
+                                    autocomplete="tel"
                                     placeholder="Your phone"/>
                             </div>
                         </div>
@@ -168,6 +175,7 @@
                                 class="form-control"
                                 id="address"
                                 name="address"
+                                autocomplete="street-address"
                                 placeholder="Address"/>
                         </div>
                         <div class="row">
@@ -178,6 +186,7 @@
                                     class="form-control"
                                     id="city"
                                     name="city"
+                                    autocomplete="address-level2"
                                     placeholder="City"/>
                             </div>
                             <div class="col-12 col-md-4 mb-3">
@@ -187,6 +196,7 @@
                                     class="form-control"
                                     id="state"
                                     name="state"
+                                    autocomplete="address-level1"
                                     placeholder="State"/>
                             </div>
                             <div class="col-12 col-md-4 mb-3">
@@ -196,13 +206,16 @@
                                     class="form-control"
                                     id="zip"
                                     name="zip"
+                                    autocomplete="postal-code"
+                                    inputmode="numeric"
+                                    pattern="[0-9]{5}"
                                     minlength="5"
                                     maxlength="5"
                                     placeholder="Zip Code"/>
                             </div>
                         </div>
                         <div class="mb-3">
-                            <label for="message">Message</label>
+                            <label for="message">Message (required)</label>
                             <textarea
                                 class="form-control"
                                 id="message"
