@@ -126,7 +126,18 @@ hr {
 }
 
 .page-shell {
-  padding-bottom: 4rem;
+    padding-bottom: 4rem;
+}
+
+.site-footer {
+    background: rgba(25, 18, 15, 0.96);
+    color: rgba(255, 255, 255, 0.78);
+    padding: 1.25rem 0;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #f4d48a;
 }
 
 .hero {
