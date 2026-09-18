@@ -96,13 +96,14 @@
             <!-- CONTACT FORM -->
             <section id="contact-form" class="content-section">
                 <div class="content-panel">
-                <h3>Contact Form</h3>
+                <h2>Contact Form</h2>
                 <div id="form-status" class="alert alert-success d-none" role="status" tabindex="-1"></div>
                 <p class="required-note" id="required-note">Fields marked required must be completed.</p>
                 <form
                     name="contactform"
                     action="https://formsubmit.co/info@drcriscalayan.com"
                     method="post"
+                    aria-describedby="required-note"
                 >
                         <input type="hidden" name="_subject" value="New message from drcriscalayan.com" />
                         <input type="hidden" name="_template" value="table" />

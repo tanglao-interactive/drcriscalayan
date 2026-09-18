@@ -19,7 +19,7 @@ GitHub Pages did not have a project-specific error document, so unknown URLs cou
 
 Command: `npm test`
 
-Result: 22 tests passed in desktop Chromium and mobile Chromium emulation. The tests verified:
+Initial result: 22 tests passed in desktop Chromium and mobile Chromium emulation. The 404 coverage is now part of an expanded 92-test local build and accessibility suite. The tests verified:
 
 - `/accessibility-test-404` displays the custom error view without redirecting.
 - The title is `Page Not Found | Cris Calayan`.
@@ -35,7 +35,7 @@ A separate browser inspection confirmed meaningful rendered content, the expecte
 
 ## Manual VoiceOver procedure
 
-Run this procedure after deployment in both Safari and Chrome on macOS:
+This procedure was completed in both Safari and Chrome on macOS on September 17, 2026, and Franz Tanglao reported that VoiceOver worked:
 
 1. Turn on VoiceOver with Command-F5.
 2. Open `https://drcriscalayan.com/accessibility-test-404`.
@@ -49,6 +49,5 @@ Run this procedure after deployment in both Safari and Chrome on macOS:
 ## Limitations
 
 - Automated checks cannot establish accessibility conformance, certification, usability with every assistive technology, or the absence of all accessibility barriers.
-- VoiceOver was not automated. The procedure above requires a human retest in Safari and Chrome.
-- The live nonexistent URL was not retested because this change has not been committed, pushed, or deployed.
-- At the time of implementation, GitHub Pages was still configured for the legacy `main:/docs` source. The repository now contains an Actions deployment workflow, but Pages must be switched to “GitHub Actions” when deployment is authorized.
+- VoiceOver was not automated; the recorded result is a human observation rather than an automated assertion.
+- The expanded 92-test suite remains a local result until the latest changes are committed, deployed, and rerun against production.

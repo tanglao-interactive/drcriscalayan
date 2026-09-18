@@ -3,6 +3,7 @@ import '../scss/main.scss';
 
 // Load Bootstrap init
 import {initBootstrap} from "./bootstrap.js";
+import { Collapse } from "bootstrap";
 
 // Loading bootstrap with optional features
 initBootstrap({
@@ -10,6 +11,34 @@ initBootstrap({
   popover: true,
   toasts: true,
 });
+
+const navigationToggle = document.querySelector(".navbar-toggler");
+const navigationMenu = document.querySelector("#nav-main");
+
+if (navigationToggle && navigationMenu) {
+  let restoreMenuFocus = false;
+
+  navigationMenu.addEventListener("shown.bs.collapse", () => {
+    navigationToggle.setAttribute("aria-label", "Close navigation");
+  });
+
+  navigationMenu.addEventListener("hidden.bs.collapse", () => {
+    navigationToggle.setAttribute("aria-label", "Open navigation");
+    if (restoreMenuFocus) {
+      navigationToggle.focus();
+      restoreMenuFocus = false;
+    }
+  });
+
+  navigationMenu.addEventListener("keydown", (event) => {
+    if (event.key !== "Escape" || !navigationMenu.classList.contains("show")) return;
+    event.preventDefault();
+    restoreMenuFocus = true;
+    Collapse.getOrCreateInstance(navigationMenu).hide();
+  });
+
+  navigationToggle.setAttribute("aria-label", "Open navigation");
+}
 
 const formStatus = document.querySelector("#form-status");
 
