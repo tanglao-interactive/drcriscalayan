@@ -7,7 +7,7 @@
 
 ## Current result
 
-The complete local build and expanded automated suite passed **92 of 92 tests** on September 17, 2026. The suite covers all declared first-party pages in desktop and mobile Chromium, important interactions and states, and axe-core rules tagged for WCAG 2.1 Levels A and AA.
+The complete local build and expanded automated suite passed **92 of 92 tests** on September 17, 2026. GitHub Actions independently ran the build and suite after commit `69836d8` and also passed **92 of 92** before deploying GitHub Pages. After deployment, the production-only accessibility suite passed **90 of 90 tests** against `https://drcriscalayan.com`. The two-test difference is the pair of build-artifact assertions included in the full build suite but not applicable to a remote production target.
 
 Franz Tanglao separately reported successful VoiceOver use in Safari and Chrome and successful observation with the macOS Reduce Motion preference enabled. The human keyboard-only path, actual browser zoom/reflow, text-spacing presentation, and visual-state contrast checks remain open in the manual test matrix.
 
@@ -21,7 +21,7 @@ The assessment improved mobile-navigation announcements and keyboard behavior, c
 - This is a self-assessment, not an independent review, certification, or guarantee that every user will encounter no barrier.
 - Third-party services and destinations are excluded after navigation leaves the site.
 - The contact-form test did not transmit personal information or submit to FormSubmit.
-- The expanded 92-test result is local until the changes are deployed and rerun against production.
+- The production run verifies the deployed pages and interactions, while the full 92-test CI run additionally verifies the generated build artifact.
 
 ## Completion gates
 
@@ -29,7 +29,7 @@ The assessment improved mobile-navigation announcements and keyboard behavior, c
 - [x] Local expanded automated suite passes 92/92.
 - [x] VoiceOver in Safari and Chrome reported successful.
 - [x] macOS Reduce Motion observation reported successful.
-- [ ] Expanded suite passes against the deployed production site.
+- [x] GitHub Actions full suite passes 92/92 and deploys successfully.
+- [x] Production-only suite passes 90/90 against the deployed site.
 - [ ] Human keyboard, zoom/reflow, text-spacing, and visual-state checks are explicitly recorded.
 - [ ] Client approves the factual project description and reference contact details.
-

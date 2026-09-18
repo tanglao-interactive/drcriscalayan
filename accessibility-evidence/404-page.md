@@ -19,7 +19,7 @@ GitHub Pages did not have a project-specific error document, so unknown URLs cou
 
 Command: `npm test`
 
-Initial result: 22 tests passed in desktop Chromium and mobile Chromium emulation. The 404 coverage is now part of an expanded 92-test local build and accessibility suite. The tests verified:
+Initial result: 22 tests passed in desktop Chromium and mobile Chromium emulation. The 404 coverage is now part of an expanded suite that passed 92/92 in GitHub Actions and 90/90 against production on September 17, 2026. The tests verified:
 
 - `/accessibility-test-404` displays the custom error view without redirecting.
 - The title is `Page Not Found | Cris Calayan`.
@@ -50,4 +50,4 @@ This procedure was completed in both Safari and Chrome on macOS on September 17,
 
 - Automated checks cannot establish accessibility conformance, certification, usability with every assistive technology, or the absence of all accessibility barriers.
 - VoiceOver was not automated; the recorded result is a human observation rather than an automated assertion.
-- The expanded 92-test suite remains a local result until the latest changes are committed, deployed, and rerun against production.
+- The full CI suite and deployed production suite passed; this does not replace human usability testing.
