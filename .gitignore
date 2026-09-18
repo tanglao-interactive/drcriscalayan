@@ -4,3 +4,5 @@
 node_modules
 dist/css
 dist/js
+playwright-report
+test-results

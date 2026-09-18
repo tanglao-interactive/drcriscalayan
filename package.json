@@ -6,7 +6,10 @@
     "scripts": {
         "build": "webpack --config webpack.config.js --mode production",
         "dev": "webpack-dev-server --open --config webpack.config.js --mode development",
-        "images": "node ./bin/images.js"
+        "dev:test": "webpack serve --config webpack.config.js --mode development --no-open",
+        "images": "node ./bin/images.js",
+        "test": "playwright test",
+        "test:a11y": "playwright test tests/accessibility.spec.js"
     },
     "type": "module",
     "author": "Franz Noel Tanglao",
@@ -16,8 +19,10 @@
         "url": "https://github.com/franznoel/drcris.git"
     },
     "devDependencies": {
+        "@axe-core/playwright": "4.13.0",
         "@babel/core": "^7.19.0",
         "@babel/preset-env": "^7.19.0",
+        "@playwright/test": "1.63.0",
         "@popperjs/core": "^2.11.5",
         "autoprefixer": "^10.4.8",
         "babel-loader": "^9.1.0",
