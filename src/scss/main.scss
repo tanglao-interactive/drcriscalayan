@@ -25,6 +25,8 @@
 
 body {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   background:
     radial-gradient(circle at top right, rgba(214, 112, 42, 0.18), transparent 32rem),
     linear-gradient(180deg, #1a1210 0, #2c1712 18rem, #f7efe2 18.05rem, #fff8ee 100%);
@@ -126,18 +128,42 @@ hr {
 }
 
 .page-shell {
-    padding-bottom: 4rem;
+  flex: 1 0 auto;
+  padding-bottom: 4rem;
 }
 
 .site-footer {
-    background: rgba(25, 18, 15, 0.96);
-    color: rgba(255, 255, 255, 0.78);
-    padding: 1.25rem 0;
-    text-align: center;
+  background: rgba(25, 18, 15, 0.96);
+  color: rgba(255, 255, 255, 0.78);
+  flex-shrink: 0;
+  padding: 1.25rem 0;
+  text-align: center;
 }
 
 .site-footer a {
-    color: #f4d48a;
+  color: #f4d48a;
+}
+
+.not-found-section {
+  align-items: center;
+  display: flex;
+  min-height: clamp(24rem, 65vh, 42rem);
+  padding: 3rem 0;
+}
+
+.not-found-panel {
+  margin-inline: auto;
+  max-width: 48rem;
+  text-align: center;
+  width: 100%;
+}
+
+.not-found-panel .section-header {
+  margin-bottom: 1.5rem;
+}
+
+.not-found-panel .btn {
+  display: inline-block;
 }
 
 .hero {

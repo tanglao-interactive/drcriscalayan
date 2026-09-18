@@ -120,6 +120,11 @@ export default {
     new HtmlWebpackPlugin({
       template: path.resolve(process.cwd(), "index.html")
     }),
+    new HtmlWebpackPlugin({
+      template: path.resolve(process.cwd(), "404.html"),
+      filename: "404.html",
+      chunks: ["main"]
+    }),
   ].concat(multipleHtmlPlugins),
 
   // Configure the "webpack-dev-server" plugin
@@ -132,6 +137,11 @@ export default {
       path.resolve(process.cwd(), "contact-us.html")
     ],
     compress: true,
+    historyApiFallback: {
+      rewrites: [
+        { from: /./, to: "/404.html" }
+      ]
+    },
     port: process.env.PORT || 9090,
     hot: true,
   },

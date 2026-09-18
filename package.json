@@ -8,8 +8,8 @@
         "dev": "webpack-dev-server --open --config webpack.config.js --mode development",
         "dev:test": "webpack serve --config webpack.config.js --mode development --no-open",
         "images": "node ./bin/images.js",
-        "test": "playwright test",
-        "test:a11y": "playwright test tests/accessibility.spec.js"
+        "test": "npm run build && playwright test",
+        "test:a11y": "npm run build && playwright test tests/accessibility.spec.js"
     },
     "type": "module",
     "author": "Franz Noel Tanglao",
